@@ -1,6 +1,5 @@
 /* global NelioContent */
 
-const { _x } = wp.i18n;
 const { registerQualityCheck } = NelioContent.editPost;
 
 registerQualityCheck( 'customizations/spanish', {
@@ -15,17 +14,13 @@ registerQualityCheck( 'customizations/spanish', {
 		if ( spanishWords.length >= 10 ) {
 			return {
 				status: 'bad',
-				text: _x(
-					'Spanish content detected',
-					'text',
-					'customizations'
-				),
+				text: 'Spanish content detected',
 			};
 		} //end if
 
 		return {
 			status: 'good',
-			text: _x( 'No Spanish content detected', 'text', 'customizations' ),
+			text: 'No Spanish content detected',
 		};
 	},
 } );
